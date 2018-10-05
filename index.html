@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <!-- <meta name="viewport" content="width=device-width"> -->
+        <title>College Data Time Machine</title> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- CONTENT GOES HERE -->
+        <h1 id="title">College Information Time Machine</h1>
+
+        <h2>Search for the name of a U.S. College and select the years you want to compare. <br></br> Click the time machine when you're ready.</h2>
+
+        <div id="wrapper">
+                <div id="college-info-left" class="college-info-style">
+                </div>
+        
+                <div class="middle">
+                    <input type="text" id="the-input" placeholder="Type college name...">
+
+                    <select name="year" id="select-year-left">
+                            <option selected="selected">Year</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                    </select>
+
+                    <select name="year" id="select-year-right">
+                            <option selected="selected">Year</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                    </select>
+
+                    <img id="timemachine" src ="images/timemachine.png">
+                    <img id="timemachine-loading" src ="images/timemachine.gif">
+
+                </div>
+
+                <div id="college-info-right" class="college-info-style">
+                </div>
+            
+        </div>
+        <div id="which-one"></div>
+            <select id='specify'>
+            </select>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>

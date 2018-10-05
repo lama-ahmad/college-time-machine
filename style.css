@@ -1,0 +1,114 @@
+* {
+    font-family: Courier;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    text-align: center;
+
+}
+
+body {
+    background-color: #EFEFEF;
+}
+
+h1 {
+    /* background-color: green; */
+    font-size: 125px;
+}
+
+h2 {
+    font-size: 75px;
+}
+
+#timemachine {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    padding-top: 8%;
+}
+
+#timemachine:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
+#timemachine-loading {
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    padding-top: 8%;
+    display: none;
+}
+
+#wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    padding-bottom: 10px;
+    /* background-color: aqua; */
+}
+
+#college-info-left {
+    display: table-cell;
+    font-size: 3.0em; 
+    font-family: Courier;
+
+}
+
+#college-info-right {
+    font-family: Courier;
+    display: table-cell;
+    font-size: 3.0em; 
+}
+
+input {
+    display: block;
+    border: 6px solid red; 
+    margin: auto; 
+    height: 100px;
+    width: 900px;
+    font-size: 4.0em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+}
+
+#select-year-left, #select-year-right {
+    width: 300px;
+    height: 100px;
+    text-align-last: center;
+    font-size: 4.0em;
+    margin: 20px;
+    border: 6px solid red; 
+
+}
+
+#which-one {
+    font-size: 3.0em;
+    font-family: Courier;
+    padding-top: 2%;
+}
+
+#specify {
+    display: none;
+    width: auto;
+    height: 100px;
+    text-align-last: center;
+    font-size: 4.0em;
+    margin: 20px;
+    padding-top: 2%;
+}
+
+#media (max-width: 500px) {
+    .big-image{
+        width: 80%;
+    }
+} 
+
