@@ -155,7 +155,7 @@ function searchCSC(searchTerm){
 
 //this function is to find the webpage of the school for the specific year selected
 function wayBack(webpage, inputYear, div) {
-    waybackRequestURL = "http://archive.org/wayback/available?url=" + webpage + "&timestamp=" + inputYear;
+    waybackRequestURL = "https://archive.org/wayback/available?url=" + webpage + "&timestamp=" + inputYear;
     var wayBackURL;
  
     $.ajax({
