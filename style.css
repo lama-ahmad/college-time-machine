@@ -1,6 +1,5 @@
 * {
     font-family: Courier;
-    /* font-family: 'Roboto Condensed', sans-serif; */
     text-align: center;
 
 }
@@ -10,21 +9,20 @@ body {
 }
 
 h1 {
-    /* background-color: green; */
-    font-size: 125px;
+    font-size: 50px;
 }
 
 h2 {
-    font-size: 75px;
+    padding-left: 0px;
+    font-size: 20px;
 }
 
 #timemachine {
-    width: 500px;
+    width: 200px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
     padding-top: 8%;
 }
 
@@ -34,7 +32,7 @@ h2 {
 }
 
 #timemachine-loading {
-    width: 500px;
+    width: 200px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -52,63 +50,80 @@ h2 {
 .middle {
     display: table-cell;
     padding-bottom: 10px;
-    /* background-color: aqua; */
 }
 
-#college-info-left {
+#college-info-left, #college-info-right {
     display: table-cell;
-    font-size: 3.0em; 
-    font-family: Courier;
-
+    font-size: 1.25em; 
 }
 
-#college-info-right {
-    font-family: Courier;
-    display: table-cell;
-    font-size: 3.0em; 
+#wb-url {
+    font-size: .75em;
 }
+
 
 input {
     display: block;
-    border: 6px solid red; 
+    border: 3px solid red; 
     margin: auto; 
-    height: 100px;
-    width: 900px;
-    font-size: 4.0em;
+    height: 50px;
+    width: 300px;
+    font-size: 1.25em;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 }
 
 #select-year-left, #select-year-right {
-    width: 300px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
     text-align-last: center;
-    font-size: 4.0em;
-    margin: 20px;
-    border: 6px solid red; 
+    font-size: 1.25em;
+    margin: 10px;
+    border: 3px solid red; 
+    border-radius: 10px;
 
 }
 
 #which-one {
-    font-size: 3.0em;
+    font-size: 1.25em;
     font-family: Courier;
-    padding-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 #specify {
     display: none;
     width: auto;
-    height: 100px;
+    height: 50px;
     text-align-last: center;
-    font-size: 4.0em;
-    margin: 20px;
-    padding-top: 2%;
+    font-size: 1.25em;
+    padding-top: 1%;
+    border: 3px solid red; 
+
 }
 
-#media (max-width: 500px) {
-    .big-image{
-        width: 80%;
-    }
-} 
+#write-up {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#timemachine-about {
+    width: 150px;
+    height: auto;
+}
+
+#timemachine-about:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
+#footer {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    display: "inline-block";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <!-- <meta name="viewport" content="width=device-width"> -->
+        <title>College Data Time Machine</title> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <!-- CONTENT GOES HERE -->
+        <h1 id="title">About the College Information Time Machine</h1>
+
+        <div id="write-up">
+
+        <a href="index.html"><img id="timemachine-about" src ="images/timemachine.png"></a>
+        <p>Click me to go back</p>
+
+        <h3>Intended Experience</h3>
+
+        <p>College Time Machine is a whimsical way to explore information about U.S. Colleges. 
+        The current intended experience is for the user to be able to explore how certain data points 
+        (tuition, racial demographics) have changed over the years.</p>
+
+        <h3>Motivation + Process</h3>
+        
+        <p>I wanted to work with data from the U.S. Department of Education, and I was most inspired 
+        by the College Scorecard API. Looking at data can often be thought of as a boring or clinical process,
+        especially when it relates to topics such as education.</p>
+
+        <p>I decided to also use the Wayback Machine API to look at the historical web pages of college institutions 
+        at specific points in time. This is where the idea of a time machine came about.</p>
+
+        <p>By putting these two API's together, I created a software Mashup that brings a new experience to exploring
+        data about college in the U.S. It is simultaneously a feeling of going back in time through the WayBack machine,
+        the selection of years, and the Time Machine character on the page, as well as exploring historical data about
+        U.S. collegs in a comparative perspective.</p>
+
+        <h3>Explanation of the design decisions</h3>
+
+        <i>Time Machine Personality</i>
+
+        <p>To create the whimsical feeling at the same time as exploring data, I added a time machine image in the
+        center of the page. Because the rest of the design is minimalistic, the time machine is the focal point of the page. 
+        The user needs to click on the time machine to trigger the search process. Blinking lights on the time machine indicate 
+        loading. If there is an error or clarification needed, the text seems to come from the time machine as a character.
+        The font ‘Courier’ looks like a the font that is on the detailing of the time machine image as well to create a cohesive 
+        feeling on the page.</p>
+        
+        <i>Side by side comparison of two years</i>
+        
+        <p>In the first version of my project, I did not display two side by side comparisons of different years. The idea of displaying 
+        a side by side comparison came about when I conducted user testing. Users often wanted to see how data points compared across
+        different years, so I decided to build the functionality in from the beginning.</p>
+        
+        <i>The Use of the Word College</i>
+        
+        <p>Although college is not a word used to describe university-level education on a global level, I wanted to make it clear that 
+        the search function would only include universities in the United States.</p>
+        
+        <h3>Challenges</h3>
+
+        <p>The JSON format from the College Score Card API changes at different dates. For example, racial demographic data has 
+        different keys at different points in time. Thus, I addressed this by limiting my scope of years from 2010 to 2016 although
+        the College Score Card API has data from 1996 to 2016. In a future version, I can add on earlier years to deal with the differences 
+        in the JSON formatting.</p>
+
+        <p>Another challenge that I faced was creating a search functionality. Because some colleges have branches or similar names, there would 
+        often be multiple results for one search. I addressed this by adding the “Please Specify” input box that pops up if there is more than 
+        one matching result according to the keyword typed in.</p>
+        
+
+        <h3>Possible next steps</h3>
+
+        <p>To take this a step further, it would be interesting to create some data visualizations. I could also add more data points and allow the 
+        user to decide on which data points specifically they would like to see.</p>
+
+        <h3>Links to Resources</h3>
+
+        <p>
+            <a href="https://collegescorecard.ed.gov/data/documentation">College Score Card API by the U.S. Department of Education</a></br>
+            <a href="https://archive.org/help/wayback_api.php">Wayback Machine by the Internet Archive</a></br>
+            <a href="https://github.com/craigprotzel/Mashups/blob/master/_Readings/NateHarrison_and_EduardoNavas_Mashup_Essay.pdf">Mashup Essay by Nate Harrison and Eduardo Navas</a>
+        </p>
+
+        </div>
+
+        <!-- <footer>this is a footer</footer> -->
+
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
