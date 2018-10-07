@@ -28,12 +28,14 @@
         especially when it relates to topics such as education.</p>
 
         <p>I decided to also use the Wayback Machine API to look at the historical web pages of college institutions 
-        at specific points in time. This is where the idea of a time machine came about.</p>
+        at specific points in time. This is where the idea of a time machine came about. Unfortunately, the API for 
+        the WayBack machine did not work when deployed due to HTTP/HTTPS request compatibility issues. Instead,
+        I added the NYTimes Article Search API.</p>
 
         <p>By putting these two API's together, I created a software Mashup that brings a new experience to exploring
-        data about college in the U.S. It is simultaneously a feeling of going back in time through the WayBack machine,
-        the selection of years, and the Time Machine character on the page, as well as exploring historical data about
-        U.S. collegs in a comparative perspective.</p>
+        data about college in the U.S. It is simultaneously a feeling of going back in time through generating a random
+        headline about the searched college in the NYTimes from the specified year, and the Time Machine character on the page, 
+        as well as exploring historical data about U.S. colleges in a comparative perspective.</p>
 
         <h3>Explanation of the design decisions</h3>
 
@@ -67,6 +69,10 @@
         <p>Another challenge that I faced was creating a search functionality. Because some colleges have branches or similar names, there would 
         often be multiple results for one search. I addressed this by adding the “Please Specify” input box that pops up if there is more than 
         one matching result according to the keyword typed in.</p>
+
+        <p>The WayBack machine was making an HTTP request, but needed to be an HTTPS request. I tried to resolve the error 
+            by modifying the URL, but it was unsuccessful.
+        </p>
         
 
         <h3>Possible next steps</h3>
@@ -79,6 +85,7 @@
         <p>
             <a href="https://collegescorecard.ed.gov/data/documentation">College Score Card API by the U.S. Department of Education</a></br>
             <a href="https://archive.org/help/wayback_api.php">Wayback Machine by the Internet Archive</a></br>
+            <a href="https://developer.nytimes.com/article_search_v2.json">NYTimes Article Search API</a></br>
             <a href="https://github.com/craigprotzel/Mashups/blob/master/_Readings/NateHarrison_and_EduardoNavas_Mashup_Essay.pdf">Mashup Essay by Nate Harrison and Eduardo Navas</a>
         </p>
 
