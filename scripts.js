@@ -95,7 +95,7 @@ function searchCSC(searchTerm){
     $.ajax({
         url : cscURL,
         type : 'GET', 
-        dataType : 'json', 
+        dataType : 'jsonp', 
         error : function(err){
             console.log(err);
         },
