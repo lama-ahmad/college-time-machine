@@ -46,6 +46,27 @@ function makeCollegeInfoHTML(cost, admissionRate, demos, year, div) {
     }
 }
 
+function makeNYTimesArticlesHTML(articles, div) {
+    console.log('zzzzzz');
+
+
+    $(div).append("<h2>Random article from the NYTimes ...</h2>");
+    var elementList = [];
+    for (var i = 0; i < articles.length; i++){
+        var headline = articles[i].headline.main;
+        var url = articles[i].web_url;
+        var headline_url = "<p><a href =" + url + ">" + headline + "</a></p>";
+        elementList.push(headline_url);
+    }
+
+    var element = elementList[Math.floor(Math.random()*elementList.length)];
+    console.log(element);
+    $(div).append(element);    
+
+    // for (var element = 0; element < elementList.length; element++) {
+    //     $('#article-info').append(elementList[element]);
+
+}
 
 function makeWBHTML(url, year, div) {
     //Create anchor
@@ -140,7 +161,8 @@ function searchCSC(searchTerm){
                     
                     $(document).ready(function() { 
                         makeCollegeInfoHTML(costAttendance, admissionRate, demos, yearList[i], selectedDiv);
-                        wayBack(webPage, yearList[i], selectedDiv);
+                        // wayBack(webPage, yearList[i], selectedDiv);
+                        NYTimesSearch(searchTerm, yearList[i], selectedDiv);
                     });
 
                 }
@@ -149,6 +171,43 @@ function searchCSC(searchTerm){
     }
 });
 
+
+}
+
+
+function NYTimesSearch(searchTerm, year, selectedDiv) {
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+    'api-key': "1647876b88394d97bc29a86e4b374ebf",
+    'q': searchTerm,
+    'begin_date': year + "0101",
+    'end_date': year + "1231"
+    });
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        dataType : 'json', 
+        error : function(err){
+            console.log("Uh oh NYT?");
+            console.log(err);
+        },
+        success : function(data){
+            console.log("Woo hoo NYT!");
+
+            var allArticles = data.response.docs;    
+            var linkedArticles = []; 
+
+            //only get the articles with active links
+            for (i = 0; i < allArticles.length; i++) {
+                if (allArticles[i].web_url.startsWith('https://www.nytimes.com/')) {  
+                    linkedArticles.push(allArticles[i]);
+                }        
+            }
+
+            makeNYTimesArticlesHTML(linkedArticles, selectedDiv);
+        }
+    });
 
 }
 
